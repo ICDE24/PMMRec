@@ -1,0 +1,32 @@
+
+import torch
+import torch.nn as nn
+from torch.nn.init import xavier_normal_, constant_
+
+
+class TextEncoder(torch.nn.Module):
+    def __init__(self, bert_model, args):
+        super(TextEncoder, self).__init__()
+        self.bert_model = bert_model
+
+        self.text_proj = nn.Linear(args.word_embedding_dim, args.embedding_dim)
+        xavier_normal_(self.text_proj.weight.data)
+        if self.text_proj.bias is not None:
+            constant_(self.text_proj.bias.data, 0)
+        
+
+
+    def forward(self, text):
+
+        batch_size, num_words = text.shape
+        num_words = num_words // 2
+        text_ids = torch.narrow(text, 1, 0, num_words)
+        text_attmask = torch.narrow(text, 1, num_words, num_words)
+
+        hidden_states_text = self.bert_model(input_ids=text_ids, attention_mask=text_attmask)[0] # 返回全部token的hidden states vector
+        # hidden_states = self.bert_model(input_ids=text_ids, attention_mask=text_attmask, token_type_ids=None, output_hidden_states=True)[2]
+
+        hidden_states_text = self.text_proj(hidden_states_text)
+        # hidden_states = self.text_proj(hidden_states[-1][:,0,:])
+        return hidden_states_text
+
