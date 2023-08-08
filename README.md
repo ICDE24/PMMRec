@@ -16,7 +16,7 @@ This is the Torch implementation for our ICDE  2023 paper:
 
 1. Dataset: 
 
-   - We provide one processed **bili_food** dataset example . You first need to download [**bili_food**](https://drive.google.com/drive/folders/1A952wltpDkmnE-eCegyBrRT9BWa16fJQ?usp=drive_link), and put it in current file.
+   - We provide one processed **bili_food** dataset example . You first need to download [bili_food](https://drive.google.com/drive/folders/1A952wltpDkmnE-eCegyBrRT9BWa16fJQ?usp=drive_link), and put it in current file.
 
    - Get the lmdb of the images of the items
 
@@ -28,9 +28,9 @@ This is the Torch implementation for our ICDE  2023 paper:
 
 2. Pre-trained PMMRec
 
-   - We provide Pre-trained PMMRec . You fist need to download [Pmmrec_pt ](https://drive.google.com/drive/folders/1c-pGz0UkG_Ki6V4YyjTsX5fOtNI2RW0a?usp=sharing), and put it in current file.
+   - We provide Pre-trained PMMRec . You fist need to download [Pmmrec_pt](https://drive.google.com/drive/folders/1c-pGz0UkG_Ki6V4YyjTsX5fOtNI2RW0a?usp=sharing), and put it in current file.
 
-3. Download text encoders :  [xlm-roberta-base](https://huggingface.co/xlm-roberta-basec) , and put it in "**TextEncoder**"file.
+3. Download text encoders :  [xlm-roberta-base](https://huggingface.co/xlm-roberta-base) , and put it in "**TextEncoder**"file.
 
 4. Download text encoders :  [clip-vit-base-patch32](https://huggingface.co/openai/clip-vit-base-patch32) , and put it in "**CVEncoder**"file.
 
