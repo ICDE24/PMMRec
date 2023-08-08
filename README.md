@@ -2,7 +2,7 @@
 
 ## PMMRec
 
-This is the Torch implementation for our ICDE  2023 paper:
+This is the Torch implementation for our paper:
 
 > Multi-Modality is All You Need for Transferable Recommender Systems
 
