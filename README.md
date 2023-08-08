@@ -30,9 +30,9 @@ This is the Torch implementation for our ICDE  2023 paper:
 
    - We provide Pre-trained PMMRec . You fist need to download [Pmmrec_pt](https://drive.google.com/drive/folders/1c-pGz0UkG_Ki6V4YyjTsX5fOtNI2RW0a?usp=sharing), and put it in current file.
 
-3. Download text encoders :  [xlm-roberta-base](https://huggingface.co/xlm-roberta-base) , and put it in "**TextEncoder**"file.
+3. Download text encoders :  [xlm-roberta-base](https://huggingface.co/xlm-roberta-base) , and put it in "**TextEncoders**"file.
 
-4. Download text encoders :  [clip-vit-base-patch32](https://huggingface.co/openai/clip-vit-base-patch32) , and put it in "**CVEncoder**"file.
+4. Download text encoders :  [clip-vit-base-patch32](https://huggingface.co/openai/clip-vit-base-patch32) , and put it in "**CVEncoders**"file.
 
 
 
@@ -41,6 +41,7 @@ This is the Torch implementation for our ICDE  2023 paper:
 After processing the datasets, you can test the transfer learning of PMMrec  on Industrial dataset by:
 
 ```shell
+cd ./src
 python setup.py 
 ```
 
